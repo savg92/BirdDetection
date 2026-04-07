@@ -2,6 +2,11 @@
 
 This document summarizes key rules and best practices from the Google TypeScript Style Guide, which is enforced by the `gts` tool.
 
+## Project Notes
+- Prefer named exports by default; allow default exports when required by framework conventions or when they improve route/component ergonomics.
+- Keep strict typing as default posture; use explicit escape hatches (`unknown`, assertions) only with clear rationale.
+- If project formatter/linter/type-checker configuration differs, follow configured tooling and keep consistency within each module.
+
 ## 1. Language Features
 - **Variable Declarations:** Always use `const` or `let`. **`var` is forbidden.** Use `const` by default.
 - **Modules:** Use ES6 modules (`import`/`export`). **Do not use `namespace`.**

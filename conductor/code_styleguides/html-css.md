@@ -2,6 +2,10 @@
 
 This document summarizes key rules and best practices from the Google HTML/CSS Style Guide.
 
+## Project Notes
+- This is a summary guide. When formatter/linter output differs, follow configured tooling.
+- Accessibility requirements in `product-guidelines.md` (WCAG 2.1 AA) take precedence for UI decisions.
+
 ## 1. General Rules
 - **Protocol:** Use HTTPS for all embedded resources.
 - **Indentation:** Indent by 2 spaces. Do not use tabs.

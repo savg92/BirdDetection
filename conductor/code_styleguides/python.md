@@ -2,6 +2,10 @@
 
 This document summarizes key rules and best practices from the Google Python Style Guide.
 
+## Project Notes
+- Use this guide with repository tooling (`ruff`, `black`, `pylint`, `mypy`, etc., as configured). If tooling conflicts with this summary, tooling wins.
+- Prefer explicit type hints for public APIs and model-serving boundaries.
+
 ## 1. Python Language Rules
 - **Linting:** Run `pylint` on your code to catch bugs and style issues.
 - **Imports:** Use `import x` for packages/modules. Use `from x import y` only when `y` is a submodule.

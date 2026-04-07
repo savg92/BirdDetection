@@ -2,6 +2,11 @@
 
 This document summarizes key rules and best practices from the Google JavaScript Style Guide.
 
+## Project Notes
+- This project primarily uses TypeScript for frontend application code; use this guide mainly for plain `.js` files and scripts.
+- Prefer named exports by default; allow default exports when framework or ecosystem conventions make them the clearer choice.
+- If bundler/runtime conventions differ on import specifiers (including extension handling), follow project tooling and keep usage consistent.
+
 ## 1. Source File Basics
 - **File Naming:** All lowercase, with underscores (`_`) or dashes (`-`). Extension must be `.js`.
 - **File Encoding:** UTF-8.
