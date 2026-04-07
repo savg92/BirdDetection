@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Environment
+.env
+
+# ML artifacts and local data
+training/data/
+apps/backend/models/bird_model.pth
+apps/backend/models/label_list.json
+apps/backend/static/uploads/*
+!apps/backend/static/uploads/.gitkeep
+
+# SQLite
+*.db
+
+# OS/editor
+.DS_Store
+.vscode/

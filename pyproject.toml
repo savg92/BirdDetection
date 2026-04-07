@@ -1,0 +1,14 @@
+[project]
+name = "bird-detection-monorepo"
+version = "0.1.0"
+description = "Bird recognition hybrid monorepo"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.uv.workspace]
+members = ["apps/backend", "training"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

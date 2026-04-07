@@ -9,6 +9,36 @@
 5. **User Experience First:** Every decision should prioritize user experience
 6. **Non-Interactive & CI-Aware:** Prefer non-interactive commands. Use `CI=true` for watch-mode tools (tests, linters) to ensure single execution.
 
+## Current Project Checkpoint (2026-04-07)
+
+This repository has an implemented baseline for all planned phases in `conductor/tracks/bird_recognition_20260401/`.
+
+### Implemented Scope Snapshot
+
+- **Phase 1:** Monorepo scaffolding (`apps/backend`, `apps/frontend`, `training`), root `Makefile`, uv workspace, bun frontend setup.
+- **Phase 2:** `training/train.ipynb` pipeline (dataset bootstrap, EfficientNet-B0 transfer learning, artifact export/copy to backend models directory).
+- **Phase 3:** FastAPI backend with startup model loading, SQLite persistence, `/predict`, `/history`, static uploads.
+- **Phase 4:** React + Vite dashboard with upload flow, Top-5 results, uncertainty alert, and history page.
+- **Phase 5:** Integration hardening, lint/test/typecheck gates, and updated conductor planning artifacts.
+
+### Canonical Validation Commands
+
+Use these commands as the default verification baseline:
+
+```bash
+make install
+make check
+```
+
+Current `make check` includes:
+
+- Backend: `ruff check` + `pytest`
+- Frontend: `eslint` + `tsc --noEmit`
+
+### Checkpoint Note
+
+Conductor phase plans currently mark implementation items complete and manual verification protocol items as in-progress/pending user validation.
+
 ## Task Workflow
 
 All tasks follow a strict lifecycle:
@@ -99,7 +129,7 @@ All tasks follow a strict lifecycle:
       The automated tests have passed. For manual verification, please follow these steps:
 
       **Manual Verification Steps:**
-      1.  **Start the development server with the command:** `npm run dev`
+      1.  **Start the development server with the command:** `npm run dev` or `yarn dev` or `bun dev` (depending on the project setup).
       2.  **Open your browser to:** `http://localhost:3000`
       3.  **Confirm that you see:** The new user profile page, with the user's name and email displayed correctly.
       ```
