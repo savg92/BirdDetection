@@ -31,3 +31,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [~] **Track: Phase 5: Integration & Final Polish**
   _Link: [./tracks/integration_polish_20260401/](./tracks/integration_polish_20260401/)_
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

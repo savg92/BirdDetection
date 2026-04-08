@@ -12,3 +12,9 @@
 - [x] Task: README & Colab Integration
   - [x] Draft a comprehensive `README.md` with setup and Colab instructions.
 - [~] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & DevOps' (Protocol in workflow.md)
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

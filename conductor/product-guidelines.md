@@ -23,3 +23,11 @@
 ## Data Handling & Privacy
 - **Local Storage**: Prioritize local storage (SQLite) for sighting history.
 - **Transparency**: Clearly inform users when their data is being used for model training or inference.
+
+## FastAPI API documentation reference
+
+For backend API exploration and testing during development:
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

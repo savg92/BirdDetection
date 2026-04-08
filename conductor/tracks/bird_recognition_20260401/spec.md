@@ -14,3 +14,9 @@ This track aims to build a production-ready bird recognition hybrid monorepo tha
 - **Model**: EfficientNet-B0 pre-trained on ImageNet.
 - **Input**: 224x224 RGB normalized images.
 - **Uncertainty**: Alert if top probability < 0.30.
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

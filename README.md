@@ -1,6 +1,12 @@
 # Bird Detection Monorepo
 
-Production-ready hybrid monorepo for bird recognition across 200 CUB-200-2011 classes.
+Production-ready hybrid monorepo for fine-grained bird species recognition (CUB-200-2011, 200 classes). Includes a pretrained PyTorch CNN checkpoint (EfficientNet-B0) and label mapping located at `apps/backend/models/bird_model.pth` and `apps/backend/models/label_list.json`. It bundles:
+
+- A FastAPI inference service with SQLite-backed sighting history and static uploads.
+- A React + Vite dashboard for image upload, Top-5 predictions, and historical views.
+- A reproducible training notebook (transfer learning with EfficientNet-B0) that exports model artifacts and labels.
+
+Designed for local development, easy deployment, and GPU-backed training workflows (Colab or remote kernels).
 
 ## Structure
 
@@ -35,6 +41,19 @@ Open `training/train.ipynb` and run cells in order. The notebook:
 - Exports `bird_model.pth` and `label_list.json`
 - Copies artifacts to `apps/backend/models/`
 
+## Model artifacts
+
+This repository includes the trained model and label mapping used by the backend inference service:
+
+- `apps/backend/models/bird_model.pth` — PyTorch checkpoint (EfficientNet-B0, transfer-learned on CUB-200-2011). Replace this file with your own trained checkpoint to change the served model.
+- `apps/backend/models/label_list.json` — JSON array mapping class indices to human-readable labels (200 classes from CUB-200-2011).
+
+Usage notes:
+
+- The backend loads the model from `apps/backend/models/` at startup. If you replace these files while the server is running, restart the backend to pick up the new artifacts.
+- To generate new artifacts, run `training/train.ipynb` (GPU recommended) and copy the produced `bird_model.pth` and `label_list.json` into `apps/backend/models/`.
+- See `apps/backend/app/inference.py` for the exact model-loading and preprocessing steps if you need to adapt the model format or input pipeline.
+
 ## VS Code + Google Colab GPU integration
 
 ### Option A: Use Colab notebook + sync artifacts
@@ -62,6 +81,14 @@ Open `training/train.ipynb` and run cells in order. The notebook:
 - `POST /predict` — upload an image and receive Top 5 predictions
 - `GET /history` — retrieve saved sightings
 - Static uploads are served from `/static/uploads/...`
+
+## FastAPI API documentation
+
+When the backend is running (`make dev`), interactive API docs are available at:
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`
 
 ## Frontend API configuration
 

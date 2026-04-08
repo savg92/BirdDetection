@@ -29,3 +29,9 @@ This track focuses on implementing the machine learning training pipeline using 
 ## Out of Scope
 - Implementation of the FastAPI backend or inference endpoints (Phase 3).
 - Implementation of the frontend dashboard or history gallery (Phase 4).
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

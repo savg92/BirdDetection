@@ -16,3 +16,9 @@
   - [x] Complete in-code documentation for complex machine learning and inference logic.
   - [x] Create a developer guide for adding new bird species and future expansion.
 - [~] Task: Conductor - User Manual Verification 'Phase 5: Integration & Final Polish' (Protocol in workflow.md)
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

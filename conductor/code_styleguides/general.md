@@ -37,3 +37,9 @@ This document outlines general coding principles that apply across all languages
 ## Practical Rule
 
 - Optimize for readability, consistency, and maintainability over strict dogma.
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

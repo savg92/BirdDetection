@@ -34,3 +34,9 @@ This track focuses on developing the modern React frontend dashboard using Vite,
 
 - Implementation of the FastAPI backend or inference endpoints (Phase 3).
 - Implementation of the machine learning training pipeline (Phase 2).
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

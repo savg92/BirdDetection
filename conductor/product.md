@@ -98,3 +98,11 @@ This project aims to build a production-ready bird recognition hybrid monorepo t
 - **Hybrid Monorepo**: Python (uv workspaces) and Node (bun) environments.
 - **Unified Workflow**: Root Makefile for dependency management and concurrent development servers.
 - **Colab Integration**: Detailed guide for connecting VS Code to remote GPU instances for training.
+
+## FastAPI API documentation reference
+
+Backend API docs endpoints (when running locally):
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

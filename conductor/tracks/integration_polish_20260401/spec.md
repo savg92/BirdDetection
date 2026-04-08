@@ -32,3 +32,9 @@ This final track focuses on end-to-end integration, polishing the UI/UX, refinin
 
 ## Out of Scope
 - Major architectural changes or implementation of new core features.
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

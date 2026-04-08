@@ -25,3 +25,11 @@
 ## Development & Training
 - **Jupyter Notebooks**: Environment for training and experimentation (`training/train.ipynb`).
 - **Google Colab Integration**: Remote GPU access via VS Code for efficient model training.
+
+## FastAPI API documentation reference
+
+FastAPI automatically serves the backend contract for local development:
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

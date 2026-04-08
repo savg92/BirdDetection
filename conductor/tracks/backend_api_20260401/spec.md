@@ -39,3 +39,9 @@ This track focuses on developing the FastAPI backend to serve bird recognition m
 
 - Implementation of the frontend dashboard or history gallery (Phase 4).
 - Implementation of the machine learning training pipeline (Phase 2).
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

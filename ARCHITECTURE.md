@@ -236,5 +236,13 @@ Potential next architecture improvements:
 - Structured observability (metrics/tracing/log aggregation).
 - Model versioning and rollback strategy.
 
+## 12) FastAPI API documentation
+
+When the backend is running, FastAPI exposes built-in API documentation:
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`
+
 ---
 

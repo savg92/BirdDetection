@@ -62,3 +62,9 @@ This document summarizes key rules and best practices from the Google JavaScript
 - Type annotations are enclosed in braces (e.g., `/** @param {string} userName */`).
 
 _Source: [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)_
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

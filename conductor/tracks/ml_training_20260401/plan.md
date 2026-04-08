@@ -10,3 +10,9 @@
   - [x] Implement training loop, best model saving, and artifact export (`bird_model.pth`, `label_list.json`).
   - [x] Implement the automation script to move artifacts to `../apps/backend/models/`.
 - [~] Task: Conductor - User Manual Verification 'Phase 2: ML Training Pipeline' (Protocol in workflow.md)
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`

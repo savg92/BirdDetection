@@ -29,3 +29,9 @@ This track focuses on building the foundational monorepo structure, setting up u
 - Implementation of the machine learning model or training scripts (Phase 2).
 - Implementation of specific backend endpoints or database logic (Phase 3).
 - Implementation of frontend components or routing (Phase 4).
+
+## FastAPI API documentation reference
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+- OpenAPI schema: `http://localhost:8000/openapi.json`
