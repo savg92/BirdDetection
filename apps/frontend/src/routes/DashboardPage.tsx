@@ -6,6 +6,7 @@ import type { PredictResponse } from '../lib/api';
 import { predictBird, toImageUrl } from '../lib/api';
 import { Alert } from '../components/ui/alert';
 import { Card } from '../components/ui/card';
+import { formatSpeciesName } from '../lib/utils';
 
 export function DashboardPage(): JSX.Element {
 	const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -54,11 +55,13 @@ export function DashboardPage(): JSX.Element {
 				<Card>
 					<h2 className='mb-3 text-lg font-semibold'>Preview</h2>
 					{previewUrl ? (
-						<img
-							src={previewUrl}
-							alt='Selected upload'
-							className='h-64 w-full rounded-lg object-cover'
-						/>
+						<div className='flex max-h-[32rem] w-full items-center justify-center overflow-hidden rounded-lg bg-slate-950/50 p-2'>
+							<img
+								src={previewUrl}
+								alt='Selected upload'
+								className='h-auto max-h-[30rem] w-auto max-w-full rounded-md object-contain'
+							/>
+						</div>
 					) : (
 						<p className='text-sm text-slate-400'>
 							Upload an image to preview it here.
@@ -72,7 +75,7 @@ export function DashboardPage(): JSX.Element {
 						<p className='mb-3 text-sm text-slate-400'>
 							Top species:{' '}
 							<span className='font-medium text-slate-100'>
-								{result.top_species}
+								{formatSpeciesName(result.top_species)}
 							</span>
 						</p>
 						<PredictionTable predictions={result.top_5} />

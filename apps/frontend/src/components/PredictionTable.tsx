@@ -1,4 +1,5 @@
 import type { PredictionItem } from '../lib/api';
+import { formatSpeciesName } from '../lib/utils';
 import {
 	Table,
 	TableBody,
@@ -27,7 +28,7 @@ export function PredictionTable({
 				<TableBody>
 					{predictions.map((item) => (
 						<TableRow key={item.species}>
-							<TableCell>{item.species}</TableCell>
+							<TableCell>{formatSpeciesName(item.species)}</TableCell>
 							<TableCell>{(item.probability * 100).toFixed(2)}%</TableCell>
 						</TableRow>
 					))}

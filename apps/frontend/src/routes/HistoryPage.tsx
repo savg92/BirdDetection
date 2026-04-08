@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { fetchHistory, type HistoryItem, toImageUrl } from '../lib/api';
 import { Alert } from '../components/ui/alert';
 import { Card } from '../components/ui/card';
+import { formatSpeciesName } from '../lib/utils';
 
 export function HistoryPage(): JSX.Element {
 	const [items, setItems] = useState<HistoryItem[]>([]);
@@ -44,10 +45,12 @@ export function HistoryPage(): JSX.Element {
 					<Card key={item.id}>
 						<img
 							src={toImageUrl(item.filepath)}
-							alt={item.top_species}
+							alt={formatSpeciesName(item.top_species)}
 							className='h-40 w-full rounded-md object-cover'
 						/>
-						<h3 className='mt-3 text-sm font-semibold'>{item.top_species}</h3>
+						<h3 className='mt-3 text-sm font-semibold'>
+							{formatSpeciesName(item.top_species)}
+						</h3>
 						<p className='text-xs text-slate-400'>
 							Confidence: {(item.probability * 100).toFixed(2)}%
 						</p>
