@@ -245,4 +245,3 @@ When the backend is running, FastAPI exposes built-in API documentation:
 - OpenAPI schema: `http://localhost:8000/openapi.json`
 
 ---
-
